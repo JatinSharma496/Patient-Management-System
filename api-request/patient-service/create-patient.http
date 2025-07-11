@@ -3,9 +3,9 @@ POST http://localhost:4000/patients
 Content-Type: application/json
 
 {
-  "name" : "Riya Sharma",
-  "email": "bababudanhills@gmail.com",
-  "address": "sada colony, Raghogarh",
+  "name" : "",
+  "email": "",
+  "address": "",
   "dateOfBirth": "2008-08-01",
   "registrationDate": "2025-07-06"
 }
