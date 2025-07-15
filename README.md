@@ -13,5 +13,5 @@ UNDER DEVELOPMENT
 
 *Patient service API Endpoints(Swagger).*
 
-![Patient service API Endpoints(Swagger).](Images/Patient_service_endpoints.png)
+![Patient service API Endpoints(Swagger).](Images/Patient_service_endpoints.pngk)
 
