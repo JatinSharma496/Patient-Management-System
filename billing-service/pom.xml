@@ -41,27 +41,22 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-netty-shaded -->
+        <!--GRPC -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-netty-shaded</artifactId>
             <version>1.69.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-protobuf -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
             <version>1.69.0</version>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.grpc/grpc-stub -->
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
             <version>1.69.0</version>
         </dependency>
-
         <dependency> <!-- necessary for Java 9+ -->
             <groupId>org.apache.tomcat</groupId>
             <artifactId>annotations-api</artifactId>
@@ -81,7 +76,6 @@
 
     </dependencies>
 
-
     <build>
         <extensions>
             <!-- Ensure OS compatibility for protoc -->
@@ -91,23 +85,22 @@
                 <version>1.7.0</version>
             </extension>
         </extensions>
+
         <plugins>
-            <!-- Spring boot / maven  -->
+            <!-- Spring Boot plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- PROTO -->
+            <!-- Protobuf & gRPC plugin -->
             <plugin>
                 <groupId>org.xolstice.maven.plugins</groupId>
                 <artifactId>protobuf-maven-plugin</artifactId>
                 <version>0.6.1</version>
                 <configuration>
-                    <!--suppress UnresolvedMavenProperty -->
                     <protocArtifact>com.google.protobuf:protoc:3.25.5:exe:${os.detected.classifier}</protocArtifact>
                     <pluginId>grpc-java</pluginId>
-                    <!--suppress UnresolvedMavenProperty -->
                     <pluginArtifact>io.grpc:protoc-gen-grpc-java:1.68.1:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
@@ -121,6 +114,5 @@
             </plugin>
         </plugins>
     </build>
-
 
 </project>
